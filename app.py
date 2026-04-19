@@ -1,6 +1,5 @@
-
 import streamlit as st
-import moviepy.editor as mp
+import moviepy as mp
 import librosa
 import numpy as np
 import mediapipe as mp_face
@@ -49,10 +48,10 @@ if uploaded_file:
             crop_x2 = crop_x1 + target_w
             
             final_clip = clip.crop(x1=crop_x1, y1=0, x2=crop_x2, y2=h)
-            final_clip.write_videofile("viral_clip.mp4", fps=24)
+            final_clip.write_videofile("https://www.youtube.com/watch?v=4zaqWUkqvIg", fps=24)
 
         st.subheader("Final Repurposed Clip")
-        st.video("viral_clip.mp4")
+        st.video("https://www.youtube.com/watch?v=4zaqWUkqvIg")
         
-        with open("viral_clip.mp4", "rb") as file:
-            st.download_button("Download Clip for Reels/TikTok", file, "viral_clip.mp4")
+        with open("https://www.youtube.com/watch?v=4zaqWUkqvIg", "rb") as file:
+            st.download_button("Download Clip for Shorts", file, "https://www.youtube.com/watch?v=4zaqWUkqvIg")
